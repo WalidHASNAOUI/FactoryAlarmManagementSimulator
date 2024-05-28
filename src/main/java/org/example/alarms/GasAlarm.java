@@ -6,8 +6,8 @@ public class GasAlarm extends Alarm
 {
     private String gasType;
 
-    public GasAlarm(Date date, String location, int importanceLevel, String gasType) {
-        super(date, location, importanceLevel);
+    public GasAlarm(Object source, Date date, String location, int importanceLevel, String gasType) {
+        super(source, date, location, importanceLevel, "Environmental Service");
         this.gasType = gasType;
     }
 

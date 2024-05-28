@@ -12,7 +12,7 @@ public class FireSensor extends Sensor
     }
 
     @Override
-    public Alarm generateAlarm() {
-        return new FireAlarm(new Date(), getLocation(), 2); // Example importance level
+    public FireAlarm generateAlarm(Object source, int importanceLevel) {
+        return new FireAlarm(source, new Date(), location, importanceLevel);
     }
 }

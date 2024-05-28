@@ -15,7 +15,11 @@ public class GasSensor extends Sensor
     }
 
     @Override
-    public Alarm generateAlarm() {
-        return new GasAlarm(new Date(), getLocation(), 2, gasType); // Example importance level
+    public GasAlarm generateAlarm(Object source, int importanceLevel) {
+        return new GasAlarm(source, new Date(), location, importanceLevel, gasType);
+    }
+
+    public String getGasType() {
+        return gasType;
     }
 }

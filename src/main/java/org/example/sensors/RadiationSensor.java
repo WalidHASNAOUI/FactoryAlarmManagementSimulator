@@ -15,7 +15,11 @@ public class RadiationSensor extends Sensor
     }
 
     @Override
-    public Alarm generateAlarm() {
-        return new RadiationAlarm(new Date(), getLocation(), 2, radiationLevel); // Example importance level
+    public RadiationAlarm generateAlarm(Object source, int importanceLevel) {
+        return new RadiationAlarm(source, new Date(), location, importanceLevel, radiationLevel);
+    }
+
+    public int getRadiationLevel() {
+        return radiationLevel;
     }
 }

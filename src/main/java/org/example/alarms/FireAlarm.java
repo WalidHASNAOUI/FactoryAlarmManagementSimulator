@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class FireAlarm extends Alarm
 {
-    public FireAlarm(Date date, String location, int importanceLevel) {
-        super(date, location, importanceLevel);
+    public FireAlarm(Object source, Date date, String location, int importanceLevel) {
+        super(source, date, location, importanceLevel, "Firefighter");
     }
 
     @Override

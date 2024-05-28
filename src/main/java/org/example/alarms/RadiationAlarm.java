@@ -6,8 +6,8 @@ public class RadiationAlarm extends Alarm
 {
     private int radiationLevel;
 
-    public RadiationAlarm(Date date, String location, int importanceLevel, int radiationLevel) {
-        super(date, location, importanceLevel);
+    public RadiationAlarm(Object source, Date date, String location, int importanceLevel, int radiationLevel) {
+        super(source, date, location, importanceLevel, "Environmental Service");
         this.radiationLevel = radiationLevel;
     }
 
